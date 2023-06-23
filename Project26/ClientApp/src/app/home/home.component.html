@@ -1,0 +1,14 @@
+<h1>Hello, world!</h1>
+<div style="display: block" *ngIf='data'>
+  <canvas baseChart
+          [datasets]="data"
+          [labels]="chartLabels"
+          [options]="chartOptions"
+          [legend]="chartLegend"
+          (click)="chartClicked($event)">
+  </canvas>
+  <div>
+    <p *ngFor="let item of bradcastedData; let i = index">Chart№ {{i + 1}} value : {{item.data}}</p>
+  </div>
+  
+</div>
